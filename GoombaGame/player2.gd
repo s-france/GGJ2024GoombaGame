@@ -8,6 +8,8 @@ const speed = 400.0
 const friction = 8000.0
 const accel = 5000.0
 
+@export var idx : int
+
 
 var inControl : bool = false
 

@@ -30,6 +30,13 @@ func player_movement(input, delta):
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
 		if collision.get_collider() is Player2:
-			collision.get_collider().queue_free()
 			col_amount += 1
+			
+			KillPlayer(collision, collision.get_collider())
+			
+			
+func KillPlayer(collision, player: Player2):
+	player.control.PlayersAlive[player.idx] = 0
+	player.control.SwitchPlayers(1)
 	
+	collision.get_collider().queue_free()

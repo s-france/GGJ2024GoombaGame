@@ -44,11 +44,13 @@ control = NodePath("..")
 position = Vector2(401, -6)
 collision_layer = 2
 control = NodePath("..")
+idx = 1
 
 [node name="Player2-3" parent="P2Controller" node_paths=PackedStringArray("control") instance=ExtResource("2_7n67y")]
 position = Vector2(-152, -167)
 collision_layer = 2
 control = NodePath("..")
+idx = 2
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(3, 6)
