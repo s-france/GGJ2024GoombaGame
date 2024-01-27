@@ -4,22 +4,23 @@
 [ext_resource type="PackedScene" uid="uid://qewqeo0r63or" path="res://player2.tscn" id="2_7n67y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8oryc"]
-size = Vector2(819, 17)
+size = Vector2(1262, 17)
 
 [node name="World" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Platform" type="Panel" parent="."]
-offset_left = -418.0
+offset_left = -633.0
 offset_top = 213.0
-offset_right = 401.0
+offset_right = 622.0
 offset_bottom = 229.0
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Platform"]
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-418, 213)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/StaticBody2D"]
-position = Vector2(409.5, 7.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(412, 7.5)
 shape = SubResource("RectangleShape2D_8oryc")
 
 [node name="Player" parent="." instance=ExtResource("1_f73e4")]
