@@ -1,9 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://ceqpurup3n5wt"]
+[gd_scene load_steps=3 format=3 uid="uid://ceqpurup3n5wt"]
+
+[ext_resource type="PackedScene" uid="uid://im5fds7crark" path="res://player.tscn" id="1_of4x1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8oryc"]
 size = Vector2(819, 17)
 
 [node name="World" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_of4x1")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
