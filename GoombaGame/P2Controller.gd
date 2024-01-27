@@ -48,15 +48,17 @@ func GetInputDirection():
 
 #player = 1 or -1 for right or left
 func SwitchPlayers(player: int):
-	currentPlayer.inControl = false
+	currentPlayer.inControl = false 
+	
 	
 	playerIdx = playerIdx + player
 	
+	'''
 	if playerIdx < 0:
 		playerIdx = 2
 	
 	if playerIdx > 2:
-		playerIdx = 0
+		playerIdx = 0'''
 	
 		
 	currentPlayer = PlayerCharacters[playerIdx]
