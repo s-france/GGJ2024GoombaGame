@@ -4,27 +4,20 @@
 [ext_resource type="Texture2D" uid="uid://bvswab51gqpw6" path="res://Player 1/Unknown.png" id="2_gdpj2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6jwg3"]
-size = Vector2(173, 164)
+size = Vector2(224, 222)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_6ewu2")
 
 [node name="Unknown" type="Sprite2D" parent="."]
-position = Vector2(0, 1.90735e-06)
-scale = Vector2(0.78, 0.74)
 texture = ExtResource("2_gdpj2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_6jwg3")
 
 [node name="CoyoteJumpTimer" type="Timer" parent="."]
-wait_time = 0.1
-one_shot = true
 
 [node name="JumpBufferTimer" type="Timer" parent="."]
-wait_time = 0.1
-one_shot = true
 
 [node name="WallJumpTimer" type="Timer" parent="."]
-wait_time = 0.1
-one_shot = true

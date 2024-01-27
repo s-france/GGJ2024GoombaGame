@@ -113,6 +113,8 @@ func jump():
 			double_jump_available = false
 		
 	
+		
+		
 
 func wall_jump():
 	if not is_on_wall_only() and wall_jump_timer.time_left <= 0.0: return
