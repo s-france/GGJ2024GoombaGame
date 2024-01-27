@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 const speed = 400.0
-const friction = 8000.0
-const accel = 4000.0
+const friction = 5000.0
+const accel = 2000.0
 
 func _physics_process(delta):
 	
@@ -21,8 +21,7 @@ func player_movement(input, delta):
 	else:
 		velocity += (input * accel * delta)
 		velocity.limit_length(speed)
+		
+		
 
-	for i in get_slide_collision_count():
-		var collision = get_slide_collision(i)
-		if collision.get_collider() is Player2:
-			collision.get_collider().queue_free()
+

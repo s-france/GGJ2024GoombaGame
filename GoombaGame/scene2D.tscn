@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ceqpurup3n5wt"]
+[gd_scene load_steps=5 format=3 uid="uid://ceqpurup3n5wt"]
 
 [ext_resource type="PackedScene" uid="uid://basgi7r75ho4u" path="res://player.tscn" id="1_f73e4"]
 [ext_resource type="PackedScene" uid="uid://qewqeo0r63or" path="res://player2.tscn" id="2_7n67y"]
@@ -7,13 +7,10 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8oryc"]
 size = Vector2(1262, 17)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ivxac"]
-size = Vector2(186, 2685)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_b7m48"]
-size = Vector2(4667, 102)
-
 [node name="World" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.25, 0.25)
 
 [node name="Platform" type="Panel" parent="."]
 offset_left = -633.0
@@ -30,54 +27,18 @@ shape = SubResource("RectangleShape2D_8oryc")
 
 [node name="Player" parent="." instance=ExtResource("1_f73e4")]
 position = Vector2(-425, 6)
-collision_mask = 3
 
 [node name="P2Controller" type="Node2D" parent="."]
 script = ExtResource("2_dxr3p")
 
 [node name="Player2-1" parent="P2Controller" node_paths=PackedStringArray("control") instance=ExtResource("2_7n67y")]
 position = Vector2(105, -8)
-collision_layer = 2
 control = NodePath("..")
 
 [node name="Player2-2" parent="P2Controller" node_paths=PackedStringArray("control") instance=ExtResource("2_7n67y")]
 position = Vector2(401, -6)
-collision_layer = 2
 control = NodePath("..")
 
 [node name="Player2-3" parent="P2Controller" node_paths=PackedStringArray("control") instance=ExtResource("2_7n67y")]
 position = Vector2(-152, -167)
-collision_layer = 2
 control = NodePath("..")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(3, 6)
-scale = Vector2(1.59127, 0.923301)
-
-[node name="StaticBody2D3" type="StaticBody2D" parent="."]
-position = Vector2(-2830, 353)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
-position = Vector2(1039, -297)
-shape = SubResource("RectangleShape2D_ivxac")
-
-[node name="StaticBody2D5" type="StaticBody2D" parent="."]
-position = Vector2(1958, 403)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
-position = Vector2(-172, -377)
-shape = SubResource("RectangleShape2D_ivxac")
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
-position = Vector2(-1451, -1337)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(1458, 241)
-shape = SubResource("RectangleShape2D_b7m48")
-
-[node name="StaticBody2D4" type="StaticBody2D" parent="."]
-position = Vector2(-1482, 1377)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
-position = Vector2(1516, -241)
-shape = SubResource("RectangleShape2D_b7m48")
