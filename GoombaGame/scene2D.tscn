@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ceqpurup3n5wt"]
+[gd_scene load_steps=5 format=3 uid="uid://ceqpurup3n5wt"]
 
 [ext_resource type="PackedScene" uid="uid://basgi7r75ho4u" path="res://player.tscn" id="1_f73e4"]
 [ext_resource type="PackedScene" uid="uid://qewqeo0r63or" path="res://player2.tscn" id="2_7n67y"]
+[ext_resource type="Script" path="res://P2Controller.gd" id="2_dxr3p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8oryc"]
 size = Vector2(1262, 17)
@@ -24,9 +25,15 @@ position = Vector2(412, 7.5)
 shape = SubResource("RectangleShape2D_8oryc")
 
 [node name="Player" parent="." instance=ExtResource("1_f73e4")]
-position = Vector2(-142, 0)
+position = Vector2(-425, 6)
 
 [node name="P2Controller" type="Node2D" parent="."]
+script = ExtResource("2_dxr3p")
 
-[node name="Player2-1" parent="." instance=ExtResource("2_7n67y")]
-position = Vector2(94, -28)
+[node name="Player2-1" parent="P2Controller" node_paths=PackedStringArray("control") instance=ExtResource("2_7n67y")]
+position = Vector2(105, -8)
+control = NodePath("..")
+
+[node name="Player2-2" parent="P2Controller" node_paths=PackedStringArray("control") instance=ExtResource("2_7n67y")]
+position = Vector2(401, -6)
+control = NodePath("..")

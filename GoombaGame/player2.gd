@@ -8,6 +8,10 @@ extends CharacterBody2D
 var jumpAvailability: bool
 var jumpBufferPressed: bool
 
+@export var control : p2Controller
+
+var input_direction : float = 0
+
 
 const GRAVITY = 2000.0
 const JUMPSPEED = -600.0
@@ -29,14 +33,17 @@ func _physics_process(delta):
 
 	
 	gravitate(delta)
-	var input_direction = Input.get_axis("left_2", "right_2")
+	#var input_direction = Input.get_axis("left_2", "right_2")
+	#input_direction = control.input_direction
+	
+	
 	print("p2 input: ")
 	print(input_direction)
 	
-	accelerate(input_direction, delta)
-	air_accelerate(input_direction, delta)
-	deccelerate(input_direction, delta)
-	air_resistance(input_direction, delta)
+	accelerate(control.input_direction, delta)
+	air_accelerate(control.input_direction, delta)
+	deccelerate(control.input_direction, delta)
+	air_resistance(control.input_direction, delta)
 	#all of jump code:
 	
 	jump()
@@ -94,7 +101,7 @@ func jump():
 	if is_on_floor():
 		double_jump_available = true
 	
-	if Input.is_action_just_pressed("jump_2") and not is_on_floor():
+	if control.jump and not is_on_floor():
 		jumpBufferTimer.start()
 		
 	if is_on_floor() and !jumpBufferTimer.is_stopped():
@@ -102,16 +109,16 @@ func jump():
 			velocity.y = JUMPSPEED
 			
 	elif is_on_floor() or coyoteTimer.time_left > 0.0:
-		if Input.is_action_just_pressed("jump_2"):
+		if control.jump:
 			velocity.y = JUMPSPEED
 			jumpBufferTimer.stop()
 			coyoteTimer.stop()
 			
 	elif not is_on_floor():
-		if Input.is_action_just_released("jump_2") and velocity.y < JUMPSPEED/2.0:
+		if control.jump and velocity.y < JUMPSPEED/2.0:
 			velocity.y = JUMPSPEED/2.0
 			
-		if Input.is_action_just_pressed("jump_2") and double_jump_available and not just_wall_jumped:
+		if control.jump and double_jump_available and not just_wall_jumped:
 			velocity.y = JUMPSPEED * 0.8
 			double_jump_available = false
 		
@@ -125,7 +132,7 @@ func wall_jump():
 	var wall_normal = get_wall_normal() #gets a vector that points away from the wall
 	if wall_jump_timer.time_left > 0.0:
 		wall_normal = was_wall_normal
-	if Input.is_action_just_pressed("jump_2"):
+	if control.jump:
 		velocity.x = wall_normal.x * speed
 		velocity.y = JUMPSPEED
 		wall_jump_timer.stop()
