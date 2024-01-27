@@ -10,6 +10,7 @@ size = Vector2(1262, 17)
 [node name="World" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.25, 0.25)
 
 [node name="Platform" type="Panel" parent="."]
 offset_left = -633.0
