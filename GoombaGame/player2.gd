@@ -6,7 +6,7 @@ extends CharacterBody2D
 
 const speed = 400.0
 const friction = 8000.0
-const accel = 8000.0
+const accel = 5000.0
 
 var inControl : bool = false
 
