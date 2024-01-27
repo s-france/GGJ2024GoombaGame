@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+
 @onready var coyoteTimer = $CoyoteJumpTimer 
 @onready var jumpBufferTimer = $JumpBufferTimer
 @onready var wall_jump_timer = $WallJumpTimer
@@ -28,7 +29,7 @@ func _physics_process(delta):
 
 	
 	gravitate(delta)
-	var input_direction = Input.get_axis("left_1", "right_1") 
+	var input_direction = Input.get_axis("left_2", "right_2") 
 	
 	accelerate(input_direction, delta)
 	air_accelerate(input_direction, delta)
@@ -91,7 +92,7 @@ func jump():
 	if is_on_floor():
 		double_jump_available = true
 	
-	if Input.is_action_just_pressed("jump_1") and not is_on_floor():
+	if Input.is_action_just_pressed("jump_2") and not is_on_floor():
 		jumpBufferTimer.start()
 		
 	if is_on_floor() and !jumpBufferTimer.is_stopped():
@@ -99,16 +100,16 @@ func jump():
 			velocity.y = JUMPSPEED
 			
 	elif is_on_floor() or coyoteTimer.time_left > 0.0:
-		if Input.is_action_just_pressed("jump_1"):
+		if Input.is_action_just_pressed("jump_2"):
 			velocity.y = JUMPSPEED
 			jumpBufferTimer.stop()
 			coyoteTimer.stop()
 			
 	elif not is_on_floor():
-		if Input.is_action_just_released("jump_1") and velocity.y < JUMPSPEED/2.0:
+		if Input.is_action_just_released("jump_2") and velocity.y < JUMPSPEED/2.0:
 			velocity.y = JUMPSPEED/2.0
 			
-		if Input.is_action_just_pressed("jump_1") and double_jump_available and not just_wall_jumped:
+		if Input.is_action_just_pressed("jump_2") and double_jump_available and not just_wall_jumped:
 			velocity.y = JUMPSPEED * 0.8
 			double_jump_available = false
 		
@@ -122,7 +123,7 @@ func wall_jump():
 	var wall_normal = get_wall_normal() #gets a vector that points away from the wall
 	if wall_jump_timer.time_left > 0.0:
 		wall_normal = was_wall_normal
-	if Input.is_action_just_pressed("jump_1"):
+	if Input.is_action_just_pressed("jump_2"):
 		velocity.x = wall_normal.x * speed
 		velocity.y = JUMPSPEED
 		wall_jump_timer.stop()

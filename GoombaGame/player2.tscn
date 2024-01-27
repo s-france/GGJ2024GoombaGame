@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://qewqeo0r63or"]
 
-[ext_resource type="Script" path="res://Player.gd" id="1_20hn5"]
+[ext_resource type="Script" path="res://player2.gd" id="1_auv1o"]
 [ext_resource type="Texture2D" uid="uid://bvswab51gqpw6" path="res://Player 1/Unknown.png" id="2_el33m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6jwg3"]
 size = Vector2(224, 222)
 
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_20hn5")
+script = ExtResource("1_auv1o")
 
 [node name="Unknown" type="Sprite2D" parent="."]
 modulate = Color(0.8, 0.427451, 1, 1)
