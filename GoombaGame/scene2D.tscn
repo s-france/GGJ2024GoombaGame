@@ -1,3 +1,22 @@
-[gd_scene format=3 uid="uid://ceqpurup3n5wt"]
+[gd_scene load_steps=2 format=3 uid="uid://ceqpurup3n5wt"]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8oryc"]
+size = Vector2(819, 17)
+
+[node name="World" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Platform" type="Panel" parent="."]
+offset_left = -418.0
+offset_top = 213.0
+offset_right = 401.0
+offset_bottom = 229.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platform"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/StaticBody2D"]
+position = Vector2(409.5, 7.5)
+shape = SubResource("RectangleShape2D_8oryc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
