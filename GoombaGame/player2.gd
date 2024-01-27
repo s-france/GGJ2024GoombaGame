@@ -3,14 +3,18 @@ extends CharacterBody2D
 
 @export var control : p2Controller
 
+
 const speed = 400.0
 const friction = 8000.0
 const accel = 8000.0
 
+var inControl : bool = false
+
 func _physics_process(delta):
 	
-	player_movement(control.input_direction, delta)
-	move_and_slide()
+	if inControl:
+		player_movement(control.input_direction, delta)
+		move_and_slide()
 	
 
 func player_movement(input, delta):
