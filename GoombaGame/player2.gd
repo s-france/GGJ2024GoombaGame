@@ -3,11 +3,9 @@ extends CharacterBody2D
 
 @export var control : p2Controller
 
-var input_direction : float 
-
 const speed = 400.0
-const friction = 5000.0
-const accel = 2000.0
+const friction = 8000.0
+const accel = 8000.0
 
 func _physics_process(delta):
 	

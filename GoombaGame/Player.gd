@@ -21,4 +21,3 @@ func player_movement(input, delta):
 	else:
 		velocity += (input * accel * delta)
 		velocity.limit_length(speed)
-
