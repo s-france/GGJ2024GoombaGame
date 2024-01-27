@@ -11,6 +11,7 @@ var R : bool = false
 @onready var p2 = $"Player2-3"
 
 @onready var PlayerCharacters = [p0, p1, p2]
+var PlayersAlive = [1, 1, 1]
 
 @onready var currentPlayer : Player2 = p0
 var playerIdx : int = 0
@@ -50,15 +51,23 @@ func GetInputDirection():
 func SwitchPlayers(player: int):
 	currentPlayer.inControl = false 
 	
-	
 	playerIdx = playerIdx + player
-	
-	'''
+		
 	if playerIdx < 0:
 		playerIdx = 2
-	
+		
 	if playerIdx > 2:
-		playerIdx = 0'''
+		playerIdx = 0
+	
+	while !PlayersAlive[playerIdx]:
+	
+		playerIdx = playerIdx + player
+		
+		if playerIdx < 0:
+			playerIdx = 2
+		
+		if playerIdx > 2:
+			playerIdx = 0
 	
 		
 	currentPlayer = PlayerCharacters[playerIdx]
