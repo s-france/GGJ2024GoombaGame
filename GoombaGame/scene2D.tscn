@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://ceqpurup3n5wt"]
+[gd_scene load_steps=3 format=3 uid="uid://ceqpurup3n5wt"]
+
+[ext_resource type="PackedScene" uid="uid://basgi7r75ho4u" path="res://player.tscn" id="1_f73e4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8oryc"]
 size = Vector2(819, 17)
@@ -19,4 +21,4 @@ offset_bottom = 229.0
 position = Vector2(409.5, 7.5)
 shape = SubResource("RectangleShape2D_8oryc")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Player" parent="." instance=ExtResource("1_f73e4")]
