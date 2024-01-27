@@ -29,7 +29,9 @@ func _physics_process(delta):
 
 	
 	gravitate(delta)
-	var input_direction = Input.get_axis("left_2", "right_2") 
+	var input_direction = Input.get_axis("left_2", "right_2")
+	print("p2 input: ")
+	print(input_direction)
 	
 	accelerate(input_direction, delta)
 	air_accelerate(input_direction, delta)
