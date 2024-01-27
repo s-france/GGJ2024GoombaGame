@@ -27,11 +27,8 @@ shape = SubResource("RectangleShape2D_8oryc")
 [node name="Player" parent="." instance=ExtResource("1_f73e4")]
 position = Vector2(-425, 6)
 
-[node name="P2Controller" type="Node2D" parent="." node_paths=PackedStringArray("p0", "p1", "p2")]
+[node name="P2Controller" type="Node2D" parent="."]
 script = ExtResource("2_dxr3p")
-p0 = NodePath("Player2-1")
-p1 = NodePath("Player2-2")
-p2 = NodePath("Player2-3")
 
 [node name="Player2-1" parent="P2Controller" node_paths=PackedStringArray("control") instance=ExtResource("2_7n67y")]
 position = Vector2(105, -8)

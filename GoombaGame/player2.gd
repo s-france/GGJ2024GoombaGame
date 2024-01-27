@@ -1,3 +1,4 @@
+class_name Player2
 extends CharacterBody2D
 
 
@@ -28,9 +29,12 @@ var double_jump_available = false
 var was_wall_normal = Vector2.ZERO
 var just_wall_jumped = false
 
-func _physics_process(delta):
-	
 
+
+
+
+
+func _physics_process(delta):
 	
 	gravitate(delta)
 	#var input_direction = Input.get_axis("left_2", "right_2")
