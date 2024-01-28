@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const speed = 2600.0
+const speed = 2200.0
 const friction = 5000.0
 const accel = 3.0
 
@@ -25,7 +25,7 @@ func player_movement(input, delta):
 		else:
 			velocity = Vector2.ZERO
 	else:
-		velocity += (((speed*input) - (velocity * 2)) * accel * delta)
+		velocity += (((speed*input) - velocity) * accel * delta)
 		
 		
 		velocity.limit_length(speed)
