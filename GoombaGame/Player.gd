@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-const speed = 400.0
+const speed = 1800.0
 const friction = 8000.0
-const accel = 4000.0
+const accel = 6.0
 
 var col_amount = 0
 
@@ -13,8 +13,7 @@ func _physics_process(delta):
 	player_movement(input_direction, delta)
 	move_and_slide()
 	
-	if col_amount == 3:
-		get_tree().reload_current_scene()
+	
 	
 
 func player_movement(input, delta):
@@ -24,14 +23,18 @@ func player_movement(input, delta):
 		else:
 			velocity = Vector2.ZERO
 	else:
-		velocity += (input * accel * delta)
+		velocity += (((speed*input) - velocity) * accel * delta)
+		
+		
 		velocity.limit_length(speed)
 
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
 		if collision.get_collider() is Player2:
 			col_amount += 1
-			
+			if col_amount == 3:
+				get_tree().reload_current_scene()
+				
 			KillPlayer(collision, collision.get_collider())
 			
 			
