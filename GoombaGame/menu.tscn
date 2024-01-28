@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://diknvnjhod7e3"]
+[gd_scene load_steps=18 format=3 uid="uid://diknvnjhod7e3"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_ovtb8"]
 [ext_resource type="Texture2D" uid="uid://fmimt7ybhrrh" path="res://assets/background.png" id="2_1xl21"]
@@ -14,15 +14,18 @@
 [ext_resource type="Texture2D" uid="uid://d3lbrf6oj7mhr" path="res://assets/credits hovered.png" id="10_ndmbp"]
 [ext_resource type="Texture2D" uid="uid://ckf6hsqy2y6dp" path="res://assets/instr pressed.png" id="12_mm6ds"]
 [ext_resource type="Texture2D" uid="uid://tbg1446epa1r" path="res://assets/Instr hovered.png" id="13_3m48s"]
+[ext_resource type="Texture2D" uid="uid://dkma6bb4tq8t" path="res://assets/instructions window.png" id="15_67w8c"]
+[ext_resource type="Texture2D" uid="uid://csv25kj6xvt7v" path="res://assets/ok hovered.png" id="16_6lf21"]
+[ext_resource type="Texture2D" uid="uid://dkamp3nrgq6tt" path="res://assets/credits window.png" id="17_5vug1"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_ovtb8")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(120, 16)
-scale = Vector2(-629.792, 23631.6)
+position = Vector2(96, 32)
+scale = Vector2(-18994.9, -849325)
 anchor_mode = 0
-zoom = Vector2(3.2, 3.2)
+zoom = Vector2(1.8, 1.8)
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(608, 344)
@@ -81,64 +84,43 @@ texture_pressed = ExtResource("12_mm6ds")
 texture_hover = ExtResource("13_3m48s")
 texture_focused = ExtResource("13_3m48s")
 
-[node name="Instructions" type="ColorRect" parent="."]
-visible = false
-top_level = true
-offset_left = 376.0
-offset_top = 64.0
-offset_right = 889.0
-offset_bottom = 613.0
-color = Color(0.133333, 0.133333, 0.133333, 1)
-
-[node name="Label" type="Label" parent="Instructions"]
-layout_mode = 0
-offset_left = 130.0
-offset_top = 243.0
-offset_right = 358.0
-offset_bottom = 269.0
-text = "INSTRUCTIONS WILL BE HERE
-"
-
-[node name="back" type="Button" parent="Instructions"]
-layout_mode = 0
-offset_left = 132.0
-offset_top = 476.0
-offset_right = 371.0
-offset_bottom = 521.0
-text = "BACK "
-
-[node name="Credits" type="ColorRect" parent="."]
+[node name="Instructions" type="TextureRect" parent="."]
 visible = false
 top_level = true
 offset_left = 336.0
-offset_top = 152.0
-offset_right = 919.0
-offset_bottom = 522.0
-color = Color(0.180392, 0.180392, 0.180392, 1)
+offset_top = 88.0
+offset_right = 1384.0
+offset_bottom = 935.0
+scale = Vector2(0.506534, 0.506534)
+texture = ExtResource("15_67w8c")
 
-[node name="back2" type="Button" parent="Credits"]
+[node name="back" type="TextureButton" parent="Instructions"]
 layout_mode = 0
-offset_left = 184.0
-offset_top = 295.0
-offset_right = 423.0
-offset_bottom = 340.0
-text = "BACK
-"
+offset_left = 236.129
+offset_top = 621.392
+offset_right = 984.129
+offset_bottom = 798.392
+scale = Vector2(0.751193, 0.751193)
+texture_normal = ExtResource("16_6lf21")
 
-[node name="Label" type="Label" parent="Credits"]
-layout_mode = 2
-offset_left = 144.0
-offset_top = 32.0
-offset_right = 303.0
-offset_bottom = 159.0
-scale = Vector2(1.85754, 1.85754)
-text = "	AUTHORS:
-	EFFIE THE ELEPHANT
-	SAM
-	SENA
-	MARINA
-"
-horizontal_alignment = 1
+[node name="Credits" type="TextureRect" parent="."]
+visible = false
+top_level = true
+offset_left = 336.0
+offset_top = 88.0
+offset_right = 1384.0
+offset_bottom = 935.0
+scale = Vector2(0.506598, 0.506598)
+texture = ExtResource("17_5vug1")
+
+[node name="back2" type="TextureButton" parent="Credits"]
+layout_mode = 0
+offset_left = 236.781
+offset_top = 585.722
+offset_right = 984.781
+offset_bottom = 762.722
+scale = Vector2(0.793853, 0.793853)
+texture_normal = ExtResource("16_6lf21")
 
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
