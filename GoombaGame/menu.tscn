@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://diknvnjhod7e3"]
+[gd_scene load_steps=15 format=3 uid="uid://b1nlcmipa6qi4"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_ovtb8"]
 [ext_resource type="Texture2D" uid="uid://fmimt7ybhrrh" path="res://assets/background.png" id="2_1xl21"]
@@ -22,7 +22,7 @@ script = ExtResource("1_ovtb8")
 position = Vector2(120, 16)
 scale = Vector2(-629.792, 23631.6)
 anchor_mode = 0
-zoom = Vector2(3.2, 3.2)
+zoom = Vector2(1.85, 1.85)
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(608, 344)
@@ -96,8 +96,11 @@ offset_left = 130.0
 offset_top = 243.0
 offset_right = 358.0
 offset_bottom = 269.0
-text = "INSTRUCTIONS WILL BE HERE
-"
+text = "Player 1: Catch all of the Minions!
+Player 2: Evade player 1!
+
+L Stick: move
+L/R (P2):  switch characters"
 
 [node name="back" type="Button" parent="Instructions"]
 layout_mode = 0
