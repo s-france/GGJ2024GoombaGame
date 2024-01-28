@@ -17,7 +17,7 @@ texture = ExtResource("2_ormc5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 8)
-scale = Vector2(-7.7242, 9.98063)
+scale = Vector2(9.56538, 9.56538)
 shape = SubResource("CircleShape2D_px4lh")
 
 [node name="CoyoteJumpTimer" type="Timer" parent="."]

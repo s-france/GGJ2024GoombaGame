@@ -44,7 +44,7 @@ func player_movement(input, delta):
 				col_amount += 1
 				
 				if col_amount == 2 && speed < 2500:
-					speed = 3000
+					speed = 2650
 					timer.start(15)
 				
 				if col_amount == 3:
