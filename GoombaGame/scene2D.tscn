@@ -307,7 +307,7 @@ offset_bottom = -215.0
 position = Vector2(-677, 746)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D9"]
-position = Vector2(2031, -244)
+position = Vector2(2031, -289)
 scale = Vector2(0.360001, 0.559999)
 shape = SubResource("RectangleShape2D_b7m48")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
