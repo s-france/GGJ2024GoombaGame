@@ -35,18 +35,18 @@ position = Vector2(-425, 6)
 script = ExtResource("2_dxr3p")
 
 [node name="Player2-1" parent="P2Controller" node_paths=PackedStringArray("control") instance=ExtResource("2_7n67y")]
-position = Vector2(105, -8)
+position = Vector2(2392, -1071)
 collision_layer = 2
 control = NodePath("..")
 
 [node name="Player2-2" parent="P2Controller" node_paths=PackedStringArray("control") instance=ExtResource("2_7n67y")]
-position = Vector2(401, -6)
+position = Vector2(172, 1999)
 collision_layer = 2
 control = NodePath("..")
 idx = 1
 
 [node name="Player2-3" parent="P2Controller" node_paths=PackedStringArray("control") instance=ExtResource("2_7n67y")]
-position = Vector2(-152, -167)
+position = Vector2(-3354, -517)
 collision_layer = 2
 control = NodePath("..")
 idx = 2
@@ -76,7 +76,7 @@ shape = SubResource("RectangleShape2D_ivxac")
 position = Vector2(-1451, -1337)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(1413, -1285)
+position = Vector2(1453, -1285)
 scale = Vector2(2.8, 1)
 shape = SubResource("RectangleShape2D_b7m48")
 
@@ -87,3 +87,215 @@ position = Vector2(-1482, 1377)
 position = Vector2(1502, 1281)
 scale = Vector2(2.56, 1)
 shape = SubResource("RectangleShape2D_b7m48")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="."]
+position = Vector2(-1482, 1377)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6"]
+position = Vector2(2031, -244)
+scale = Vector2(0.360001, 0.559999)
+shape = SubResource("RectangleShape2D_b7m48")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D6"]
+offset_left = 1187.0
+offset_top = -270.0
+offset_right = 2872.0
+offset_bottom = -215.0
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="."]
+position = Vector2(-2282, -554)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7"]
+position = Vector2(2031, -244)
+scale = Vector2(0.360001, 0.559999)
+shape = SubResource("RectangleShape2D_b7m48")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D7"]
+offset_left = 1187.0
+offset_top = -270.0
+offset_right = 2872.0
+offset_bottom = -215.0
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="."]
+position = Vector2(-859, -33)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8"]
+position = Vector2(2031, -244)
+scale = Vector2(0.360001, 0.559999)
+shape = SubResource("RectangleShape2D_b7m48")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D8"]
+offset_left = 1187.0
+offset_top = -270.0
+offset_right = 2872.0
+offset_bottom = -215.0
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="."]
+position = Vector2(-542, 907)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D9"]
+position = Vector2(2031, -244)
+scale = Vector2(0.360001, 0.559999)
+shape = SubResource("RectangleShape2D_b7m48")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D9"]
+offset_left = 1187.0
+offset_top = -270.0
+offset_right = 2872.0
+offset_bottom = -215.0
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="."]
+position = Vector2(233, -528)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D10"]
+position = Vector2(2031, -244)
+scale = Vector2(0.360001, 0.559999)
+shape = SubResource("RectangleShape2D_b7m48")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D10"]
+offset_left = 1187.0
+offset_top = -270.0
+offset_right = 2872.0
+offset_bottom = -215.0
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="."]
+position = Vector2(-5253, 2330)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D11"]
+position = Vector2(2031, -244)
+scale = Vector2(0.360001, 0.559999)
+shape = SubResource("RectangleShape2D_b7m48")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D11"]
+offset_left = 1187.0
+offset_top = -270.0
+offset_right = 2872.0
+offset_bottom = -215.0
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="."]
+position = Vector2(-3057, 1339)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D12"]
+position = Vector2(2031, -244)
+scale = Vector2(0.360001, 0.559999)
+shape = SubResource("RectangleShape2D_b7m48")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D12"]
+offset_left = 1187.0
+offset_top = -270.0
+offset_right = 2872.0
+offset_bottom = -215.0
+
+[node name="StaticBody2D13" type="StaticBody2D" parent="."]
+position = Vector2(-5355, 1034)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D13"]
+position = Vector2(2031, -244)
+scale = Vector2(0.360001, 0.559999)
+shape = SubResource("RectangleShape2D_b7m48")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D13"]
+offset_left = 1187.0
+offset_top = -270.0
+offset_right = 2872.0
+offset_bottom = -215.0
+
+[node name="StaticBody2D14" type="StaticBody2D" parent="."]
+position = Vector2(-4314, 1808)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D14"]
+position = Vector2(2031, -244)
+scale = Vector2(0.360001, 0.559999)
+shape = SubResource("RectangleShape2D_b7m48")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D14"]
+offset_left = 1187.0
+offset_top = -270.0
+offset_right = 2872.0
+offset_bottom = -215.0
+
+[node name="StaticBody2D15" type="StaticBody2D" parent="."]
+position = Vector2(-1939, 1885)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D15"]
+position = Vector2(2031, -244)
+scale = Vector2(0.360001, 0.559999)
+shape = SubResource("RectangleShape2D_b7m48")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D15"]
+offset_left = 1187.0
+offset_top = -270.0
+offset_right = 2872.0
+offset_bottom = -215.0
+
+[node name="StaticBody2D16" type="StaticBody2D" parent="."]
+position = Vector2(-2866, 2355)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D16"]
+position = Vector2(2031, -244)
+scale = Vector2(0.360001, 0.559999)
+shape = SubResource("RectangleShape2D_b7m48")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D16"]
+offset_left = 1187.0
+offset_top = -270.0
+offset_right = 2872.0
+offset_bottom = -215.0
+
+[node name="StaticBody2D17" type="StaticBody2D" parent="."]
+position = Vector2(-543, 666)
+rotation = 1.5761
+scale = Vector2(0.360009, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D17"]
+position = Vector2(2031, -244)
+scale = Vector2(0.360001, 0.559999)
+shape = SubResource("RectangleShape2D_b7m48")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D17"]
+offset_left = 1187.0
+offset_top = -270.0
+offset_right = 2872.0
+offset_bottom = -215.0
+
+[node name="StaticBody2D18" type="StaticBody2D" parent="."]
+position = Vector2(-2701, 907)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D18"]
+position = Vector2(2031, -244)
+scale = Vector2(0.360001, 0.559999)
+shape = SubResource("RectangleShape2D_b7m48")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D18"]
+offset_left = 1187.0
+offset_top = -270.0
+offset_right = 2872.0
+offset_bottom = -215.0
+
+[node name="StaticBody2D19" type="StaticBody2D" parent="."]
+position = Vector2(-4657, 43)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D19"]
+position = Vector2(2031, -244)
+scale = Vector2(0.360001, 0.559999)
+shape = SubResource("RectangleShape2D_b7m48")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D19"]
+offset_left = 1187.0
+offset_top = -270.0
+offset_right = 2872.0
+offset_bottom = -215.0
