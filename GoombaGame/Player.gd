@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-const speed = 2200.0
+var speed = 2200.0
 const friction = 5000.0
-const accel = 3.0
+const accel = 5.0
 
 var hitPlayer : bool = false
 
@@ -42,6 +42,10 @@ func player_movement(input, delta):
 				print(col_amount)
 				
 				col_amount += 1
+				
+				if col_amount == 2 && speed < 2500:
+					speed = 2600
+				
 				if col_amount == 3:
 					get_tree().change_scene_to_file("res://p1wins.tscn")
 					
