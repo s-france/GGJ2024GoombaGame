@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const speed = 1800.0
+const speed = 2000.0
 const friction = 8000.0
 const accel = 5.0
 

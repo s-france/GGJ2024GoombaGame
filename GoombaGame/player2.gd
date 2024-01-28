@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var control : p2Controller
 
 
-const speed = 1400.0
+const speed = 2400.0
 const friction = 9000.0
 const accel = 8.0
 

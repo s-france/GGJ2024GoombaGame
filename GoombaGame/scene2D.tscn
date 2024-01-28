@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://ceqpurup3n5wt"]
+[gd_scene load_steps=10 format=3 uid="uid://ceqpurup3n5wt"]
 
 [ext_resource type="PackedScene" uid="uid://basgi7r75ho4u" path="res://player.tscn" id="1_f73e4"]
 [ext_resource type="Script" path="res://scene2D.gd" id="1_oev5n"]
 [ext_resource type="PackedScene" uid="uid://qewqeo0r63or" path="res://player2.tscn" id="2_7n67y"]
 [ext_resource type="Script" path="res://P2Controller.gd" id="2_dxr3p"]
+[ext_resource type="AudioStream" uid="uid://0x0lrql8w2pk" path="res://TaggleTog2.wav" id="5_kawy7"]
+[ext_resource type="Script" path="res://Music.gd" id="6_x23r3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8oryc"]
 size = Vector2(1262, 17)
@@ -53,6 +55,10 @@ collision_layer = 2
 control = NodePath("..")
 idx = 2
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_kawy7")
+script = ExtResource("6_x23r3")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(3, 6)
 scale = Vector2(1.59127, 0.923301)
@@ -91,7 +97,8 @@ scale = Vector2(2.56, 1)
 shape = SubResource("RectangleShape2D_b7m48")
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="."]
-position = Vector2(-1482, 1377)
+position = Vector2(1546, 1593)
+scale = Vector2(0.599998, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6"]
 position = Vector2(2031, -244)
@@ -288,7 +295,7 @@ offset_right = 2872.0
 offset_bottom = -215.0
 
 [node name="StaticBody2D19" type="StaticBody2D" parent="."]
-position = Vector2(-4657, 43)
+position = Vector2(-4469, 70)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D19"]
 position = Vector2(2031, -244)
@@ -313,5 +320,52 @@ vertical_alignment = 1
 [node name="Timer" type="Timer" parent="."]
 wait_time = 10.0
 one_shot = true
+
+[node name="StaticBody2D20" type="StaticBody2D" parent="."]
+position = Vector2(-2464, 1617)
+scale = Vector2(0.320001, 9.88)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D20"]
+position = Vector2(2031, -244)
+scale = Vector2(0.360001, 0.559999)
+shape = SubResource("RectangleShape2D_b7m48")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D20"]
+offset_left = 1187.5
+offset_top = -272.773
+offset_right = 2872.5
+offset_bottom = -217.773
+
+[node name="StaticBody2D21" type="StaticBody2D" parent="."]
+position = Vector2(-4185, -546)
+scale = Vector2(0.599998, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D21"]
+position = Vector2(2031, -244)
+scale = Vector2(0.360001, 0.559999)
+shape = SubResource("RectangleShape2D_b7m48")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D21"]
+offset_left = 1187.0
+offset_top = -270.0
+offset_right = 2872.0
+offset_bottom = -215.0
+
+[node name="StaticBody2D22" type="StaticBody2D" parent="."]
+position = Vector2(-3366, -1289)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D22"]
+position = Vector2(2031, -244)
+scale = Vector2(0.360001, 0.559999)
+shape = SubResource("RectangleShape2D_b7m48")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D22"]
+offset_left = 1187.0
+offset_top = -270.0
+offset_right = 2872.0
+offset_bottom = -215.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
