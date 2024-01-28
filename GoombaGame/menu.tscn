@@ -1,9 +1,13 @@
 [gd_scene load_steps=2 format=3 uid="uid://diknvnjhod7e3"]
 
-[ext_resource type="Script" path="res://node_2d.gd" id="1_arhku"]
+[ext_resource type="Script" path="res://node_2d.gd" id="1_10men"]
 
 [node name="Menu" type="Node2D"]
-script = ExtResource("1_arhku")
+script = ExtResource("1_10men")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+zoom = Vector2(3, 3)
 
 [node name="play" type="Button" parent="."]
 offset_left = 300.0
