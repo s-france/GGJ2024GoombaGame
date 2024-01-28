@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ceqpurup3n5wt"]
+[gd_scene load_steps=12 format=3 uid="uid://ceqpurup3n5wt"]
 
 [ext_resource type="PackedScene" uid="uid://basgi7r75ho4u" path="res://player.tscn" id="1_f73e4"]
 [ext_resource type="Script" path="res://scene2D.gd" id="1_oev5n"]
@@ -618,7 +618,7 @@ offset_bottom = -215.0
 position = Vector2(-2782, 772)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D18"]
-position = Vector2(2031, -244)
+position = Vector2(2031, -240)
 scale = Vector2(0.360001, 0.559999)
 shape = SubResource("RectangleShape2D_b7m48")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
