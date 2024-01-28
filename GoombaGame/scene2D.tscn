@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ceqpurup3n5wt"]
+[gd_scene load_steps=13 format=3 uid="uid://ceqpurup3n5wt"]
 
 [ext_resource type="PackedScene" uid="uid://basgi7r75ho4u" path="res://player.tscn" id="1_f73e4"]
 [ext_resource type="Script" path="res://scene2D.gd" id="1_oev5n"]
@@ -7,7 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://7ccwnyyp3ogj" path="res://assets/CastleFloor.png" id="2_vrev5"]
 [ext_resource type="AudioStream" uid="uid://0x0lrql8w2pk" path="res://TaggleTog2.wav" id="5_kawy7"]
 [ext_resource type="Script" path="res://Music.gd" id="6_x23r3"]
-[ext_resource type="PackedScene" uid="uid://dn1jm1eoa03hb" path="res://time_left.tscn" id="8_42a1c"]
+[ext_resource type="Texture2D" uid="uid://c8f2q2nav2675" path="res://bricksquare (1).png" id="8_2yhgk"]
+[ext_resource type="PackedScene" path="res://time_left.tscn" id="8_42a1c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ivxac"]
 size = Vector2(186, 2685)
@@ -663,7 +664,8 @@ offset_left = 1187.5
 offset_top = -271.964
 offset_right = 2872.5
 offset_bottom = -216.964
-expand_mode = 1
+texture = ExtResource("8_2yhgk")
+expand_mode = 3
 
 [node name="StaticBody2D32" type="StaticBody2D" parent="."]
 position = Vector2(-3589, 3212)
@@ -675,11 +677,13 @@ scale = Vector2(0.360001, 0.559999)
 shape = SubResource("RectangleShape2D_b7m48")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D32"]
+[node name="ColorRect2" type="TextureRect" parent="StaticBody2D32"]
 offset_left = 1187.5
 offset_top = -271.964
 offset_right = 2872.5
 offset_bottom = -216.964
+texture = ExtResource("8_2yhgk")
+expand_mode = 3
 
 [node name="StaticBody2D33" type="StaticBody2D" parent="."]
 position = Vector2(-3867, 1903)
@@ -691,11 +695,13 @@ scale = Vector2(0.360001, 0.559999)
 shape = SubResource("RectangleShape2D_stdf3")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D33"]
+[node name="ColorRect2" type="TextureRect" parent="StaticBody2D33"]
 offset_left = 1187.5
 offset_top = -271.964
 offset_right = 2872.5
 offset_bottom = -216.964
+texture = ExtResource("8_2yhgk")
+expand_mode = 3
 
 [node name="StaticBody2D46" type="StaticBody2D" parent="."]
 position = Vector2(-3699, 897)
@@ -707,11 +713,13 @@ scale = Vector2(0.360001, 0.559999)
 shape = SubResource("RectangleShape2D_b7m48")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D46"]
+[node name="ColorRect" type="TextureRect" parent="StaticBody2D46"]
 offset_left = 1187.5
 offset_top = -271.964
 offset_right = 2872.5
 offset_bottom = -216.964
+texture = ExtResource("8_2yhgk")
+expand_mode = 2
 
 [node name="StaticBody2D47" type="StaticBody2D" parent="."]
 position = Vector2(212, 1159)
@@ -723,11 +731,13 @@ scale = Vector2(0.360001, 0.559999)
 shape = SubResource("RectangleShape2D_b7m48")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D47"]
+[node name="ColorRect2" type="TextureRect" parent="StaticBody2D47"]
 offset_left = 1187.5
 offset_top = -271.964
 offset_right = 2872.5
 offset_bottom = -216.964
+texture = ExtResource("8_2yhgk")
+expand_mode = 3
 
 [node name="StaticBody2D48" type="StaticBody2D" parent="."]
 position = Vector2(2691, 3659)
@@ -739,11 +749,13 @@ scale = Vector2(0.360001, 0.559999)
 shape = SubResource("RectangleShape2D_b7m48")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D48"]
+[node name="ColorRect2" type="TextureRect" parent="StaticBody2D48"]
 offset_left = 1187.5
 offset_top = -271.964
 offset_right = 2872.5
 offset_bottom = -216.964
+texture = ExtResource("8_2yhgk")
+expand_mode = 3
 
 [node name="StaticBody2D50" type="StaticBody2D" parent="."]
 position = Vector2(2389, 1958)
@@ -755,11 +767,13 @@ scale = Vector2(0.360001, 0.559999)
 shape = SubResource("RectangleShape2D_b7m48")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D50"]
+[node name="ColorRect2" type="TextureRect" parent="StaticBody2D50"]
 offset_left = 1187.5
 offset_top = -271.964
 offset_right = 2872.5
 offset_bottom = -216.964
+texture = ExtResource("8_2yhgk")
+expand_mode = 3
 
 [node name="StaticBody2D49" type="StaticBody2D" parent="."]
 position = Vector2(2188, 2779)
@@ -771,11 +785,13 @@ scale = Vector2(0.360001, 0.559999)
 shape = SubResource("RectangleShape2D_b7m48")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D49"]
+[node name="ColorRect2" type="TextureRect" parent="StaticBody2D49"]
 offset_left = 1187.5
 offset_top = -271.964
 offset_right = 2872.5
 offset_bottom = -216.964
+texture = ExtResource("8_2yhgk")
+expand_mode = 3
 
 [node name="StaticBody2D41" type="StaticBody2D" parent="."]
 position = Vector2(261, 1984)
@@ -787,11 +803,13 @@ scale = Vector2(0.360001, 0.559999)
 shape = SubResource("RectangleShape2D_b7m48")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D41"]
+[node name="ColorRect2" type="TextureRect" parent="StaticBody2D41"]
 offset_left = 1187.5
 offset_top = -271.964
 offset_right = 2872.5
 offset_bottom = -216.964
+texture = ExtResource("8_2yhgk")
+expand_mode = 3
 
 [node name="StaticBody2D24" type="StaticBody2D" parent="."]
 position = Vector2(-150, 3244)
@@ -803,11 +821,13 @@ scale = Vector2(0.360001, 0.559999)
 shape = SubResource("RectangleShape2D_b7m48")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D24"]
+[node name="ColorRect2" type="TextureRect" parent="StaticBody2D24"]
 offset_left = 1187.5
-offset_top = -272.773
+offset_top = -271.964
 offset_right = 2872.5
-offset_bottom = -217.773
+offset_bottom = -216.964
+texture = ExtResource("8_2yhgk")
+expand_mode = 3
 
 [node name="StaticBody2D51" type="StaticBody2D" parent="."]
 position = Vector2(2953, 1032)
@@ -819,11 +839,13 @@ scale = Vector2(0.360001, 0.559999)
 shape = SubResource("RectangleShape2D_b7m48")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D51"]
+[node name="ColorRect2" type="TextureRect" parent="StaticBody2D51"]
 offset_left = 1187.5
-offset_top = -272.773
+offset_top = -271.964
 offset_right = 2872.5
-offset_bottom = -217.773
+offset_bottom = -216.964
+texture = ExtResource("8_2yhgk")
+expand_mode = 3
 
 [node name="StaticBody2D21" type="StaticBody2D" parent="."]
 position = Vector2(-4333, -426)
