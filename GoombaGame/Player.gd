@@ -5,7 +5,7 @@ const friction = 5000.0
 const accel = 5.0
 
 var hitPlayer : bool = false
-
+@onready var timer = $"../Timer"
 var col_amount = 0
 
 func _physics_process(delta):
@@ -44,7 +44,8 @@ func player_movement(input, delta):
 				col_amount += 1
 				
 				if col_amount == 2 && speed < 2500:
-					speed = 2600
+					speed = 3000
+					timer.start(15)
 				
 				if col_amount == 3:
 					get_tree().change_scene_to_file("res://p1wins.tscn")
