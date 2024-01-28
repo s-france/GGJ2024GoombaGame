@@ -5,13 +5,18 @@ extends CharacterBody2D
 
 
 const speed = 1400.0
-const friction = 10000.0
+const friction = 9000.0
 const accel = 8.0
 
 @export var idx : int
 
 
 var inControl : bool = false
+
+
+func _ready():
+	if idx == 1:
+		inControl = true
 
 func _physics_process(delta):
 	

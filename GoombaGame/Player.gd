@@ -2,13 +2,13 @@ extends CharacterBody2D
 
 const speed = 1800.0
 const friction = 8000.0
-const accel = 6.0
+const accel = 5.0
 
 var col_amount = 0
 
 func _physics_process(delta):
 	
-	var input_direction = Input.get_vector("left_1", "right_1", "up_1", "down_1") 
+	var input_direction = Input.get_vector("left_1", "right_1", "up_1", "down_1")
 	
 	player_movement(input_direction, delta)
 	move_and_slide()
