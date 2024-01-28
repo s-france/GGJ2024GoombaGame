@@ -56,6 +56,7 @@ idx = 2
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(3, 6)
 scale = Vector2(1.59127, 0.923301)
+zoom = Vector2(0.25, 0.25)
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 position = Vector2(-2830, 353)
@@ -300,11 +301,12 @@ offset_left = 1187.0
 offset_top = -270.0
 offset_right = 2872.0
 offset_bottom = -215.0
+
 [node name="Label" type="Label" parent="."]
-offset_left = -1770.0
-offset_top = -882.0
-offset_right = 1781.0
-offset_bottom = -405.0
+offset_left = -1646.0
+offset_top = -1318.0
+offset_right = 1905.0
+offset_bottom = -841.0
 horizontal_alignment = 1
 vertical_alignment = 1
 
