@@ -35,6 +35,7 @@ func player_movement(input, delta):
 			KillPlayer(collision, collision.get_collider())
 			
 			
+			
 func KillPlayer(collision, player: Player2):
 	player.control.PlayersAlive[player.idx] = 0
 	player.control.SwitchPlayers(1)
