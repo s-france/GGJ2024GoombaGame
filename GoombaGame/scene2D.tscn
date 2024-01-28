@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ceqpurup3n5wt"]
+[gd_scene load_steps=11 format=3 uid="uid://ceqpurup3n5wt"]
 
 [ext_resource type="PackedScene" uid="uid://basgi7r75ho4u" path="res://player.tscn" id="1_f73e4"]
 [ext_resource type="Script" path="res://scene2D.gd" id="1_oev5n"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://7ccwnyyp3ogj" path="res://assets/CastleFloor.png" id="2_vrev5"]
 [ext_resource type="AudioStream" uid="uid://0x0lrql8w2pk" path="res://TaggleTog2.wav" id="5_kawy7"]
 [ext_resource type="Script" path="res://Music.gd" id="6_x23r3"]
+[ext_resource type="PackedScene" uid="uid://dn1jm1eoa03hb" path="res://time_left.tscn" id="8_42a1c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ivxac"]
 size = Vector2(186, 2685)
@@ -606,14 +607,6 @@ offset_top = -270.0
 offset_right = 2872.0
 offset_bottom = -215.0
 
-[node name="Label" type="Label" parent="."]
-offset_left = -1646.0
-offset_top = -1318.0
-offset_right = 1905.0
-offset_bottom = -841.0
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Timer" type="Timer" parent="."]
 wait_time = 60.0
 one_shot = true
@@ -839,5 +832,12 @@ offset_left = 1187.0
 offset_top = -270.0
 offset_right = 2872.0
 offset_bottom = -215.0
+
+[node name="Time left" parent="." instance=ExtResource("8_42a1c")]
+offset_left = -712.0
+offset_top = -2112.0
+offset_right = -712.0
+offset_bottom = -2112.0
+scale = Vector2(1.98923, 1.20615)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

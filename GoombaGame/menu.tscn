@@ -53,9 +53,9 @@ offset_bottom = 281.0
 scale = Vector2(0.538608, 0.542333)
 focus_neighbor_top = NodePath("../quit")
 focus_neighbor_bottom = NodePath("../instructions")
+button_mask = 0
 texture_normal = ExtResource("2_2yurv")
 texture_pressed = ExtResource("6_v5gui")
-texture_hover = ExtResource("7_q4hff")
 texture_focused = ExtResource("7_q4hff")
 
 [node name="credits" type="TextureButton" parent="."]

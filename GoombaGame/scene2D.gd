@@ -10,7 +10,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var time_left : int = timer.time_left + .9
-	timer_label.text = str(time_left)
+	$"Time left".set_value(time_left)
 
 
 func _on_timer_timeout():
