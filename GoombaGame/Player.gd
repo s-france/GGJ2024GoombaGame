@@ -43,7 +43,7 @@ func player_movement(input, delta):
 				
 				col_amount += 1
 				if col_amount == 3:
-					get_tree().reload_current_scene()
+					get_tree().change_scene_to_file("res://p1wins.tscn")
 					
 				KillPlayer(collision, collision.get_collider())
 			

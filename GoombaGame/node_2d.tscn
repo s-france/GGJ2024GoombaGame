@@ -106,3 +106,33 @@ MARINA
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Instructions/back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Credits/back2" to="." method="_on_back_pressed"]
+[gd_scene format=3 uid="uid://bko8pbgsb8pfv"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 202.0
+offset_top = 102.0
+offset_right = 942.0
+offset_bottom = 496.0
+color = Color(0.156863, 0.156863, 0.156863, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 263.0
+offset_top = 110.0
+offset_right = 435.0
+offset_bottom = 217.0
+text = "PLAYER 1 WINS!!!"
+
+[node name="OK" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 213.0
+offset_right = 404.0
+offset_bottom = 281.0
+text = "OK
+"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
