@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://ceqpurup3n5wt"]
+[gd_scene load_steps=11 format=3 uid="uid://ceqpurup3n5wt"]
 
 [ext_resource type="PackedScene" uid="uid://basgi7r75ho4u" path="res://player.tscn" id="1_f73e4"]
 [ext_resource type="Script" path="res://scene2D.gd" id="1_oev5n"]
 [ext_resource type="PackedScene" uid="uid://qewqeo0r63or" path="res://player2.tscn" id="2_7n67y"]
 [ext_resource type="Script" path="res://P2Controller.gd" id="2_dxr3p"]
+[ext_resource type="Texture2D" uid="uid://7ccwnyyp3ogj" path="res://assets/CastleFloor.png" id="2_vrev5"]
 [ext_resource type="AudioStream" uid="uid://0x0lrql8w2pk" path="res://TaggleTog2.wav" id="5_kawy7"]
 [ext_resource type="Script" path="res://Music.gd" id="6_x23r3"]
 
@@ -18,6 +19,11 @@ size = Vector2(4667, 102)
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_oev5n")
+
+[node name="CastleFloor" type="Sprite2D" parent="."]
+position = Vector2(111, 25)
+scale = Vector2(4.64648, 4.41129)
+texture = ExtResource("2_vrev5")
 
 [node name="Platform" type="Panel" parent="."]
 offset_left = -633.0

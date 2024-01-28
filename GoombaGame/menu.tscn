@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://diknvnjhod7e3"]
+[gd_scene load_steps=15 format=3 uid="uid://diknvnjhod7e3"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_ovtb8"]
+[ext_resource type="Texture2D" uid="uid://fmimt7ybhrrh" path="res://assets/background.png" id="2_1xl21"]
 [ext_resource type="Texture2D" uid="uid://c8g5xx05bc7s8" path="res://assets/PLAY.png" id="2_2yurv"]
 [ext_resource type="Texture2D" uid="uid://ddli2bom78pju" path="res://assets/INSTRUCTIONS .png" id="3_57qo6"]
 [ext_resource type="Texture2D" uid="uid://bcn2gdjvlmx4t" path="res://assets/quit pressed.png" id="3_g4c06"]
@@ -18,7 +19,15 @@
 script = ExtResource("1_ovtb8")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(578, 322)
+position = Vector2(120, 16)
+scale = Vector2(-629.792, 23631.6)
+anchor_mode = 0
+zoom = Vector2(3.2, 3.2)
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(608, 344)
+scale = Vector2(0.578634, 0.603515)
+texture = ExtResource("2_1xl21")
 
 [node name="quit" type="TextureButton" parent="."]
 offset_left = 144.0
@@ -75,10 +84,10 @@ texture_focused = ExtResource("13_3m48s")
 [node name="Instructions" type="ColorRect" parent="."]
 visible = false
 top_level = true
-offset_left = 312.0
-offset_top = 55.0
-offset_right = 825.0
-offset_bottom = 604.0
+offset_left = 376.0
+offset_top = 64.0
+offset_right = 889.0
+offset_bottom = 613.0
 color = Color(0.133333, 0.133333, 0.133333, 1)
 
 [node name="Label" type="Label" parent="Instructions"]
@@ -96,15 +105,15 @@ offset_left = 132.0
 offset_top = 476.0
 offset_right = 371.0
 offset_bottom = 521.0
-text = "BACK  (WE'RE SO BACK)"
+text = "BACK "
 
 [node name="Credits" type="ColorRect" parent="."]
 visible = false
 top_level = true
-offset_left = 281.0
-offset_top = 105.0
-offset_right = 864.0
-offset_bottom = 475.0
+offset_left = 336.0
+offset_top = 152.0
+offset_right = 919.0
+offset_bottom = 522.0
 color = Color(0.180392, 0.180392, 0.180392, 1)
 
 [node name="back2" type="Button" parent="Credits"]
@@ -113,23 +122,23 @@ offset_left = 184.0
 offset_top = 295.0
 offset_right = 423.0
 offset_bottom = 340.0
-text = "BACK  (WE'RE SO BACK)"
-
-[node name="ScrollContainer" type="ScrollContainer" parent="Credits"]
-layout_mode = 0
-offset_left = 1.0
-offset_top = 2.0
-offset_right = 584.0
-offset_bottom = 371.0
-
-[node name="Label" type="Label" parent="Credits/ScrollContainer"]
-layout_mode = 2
-text = "AUTHORS:
-EFFIE THE ELEPHANT
-SAM
-SENA
-MARINA
+text = "BACK
 "
+
+[node name="Label" type="Label" parent="Credits"]
+layout_mode = 2
+offset_left = 144.0
+offset_top = 32.0
+offset_right = 303.0
+offset_bottom = 159.0
+scale = Vector2(1.85754, 1.85754)
+text = "	AUTHORS:
+	EFFIE THE ELEPHANT
+	SAM
+	SENA
+	MARINA
+"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
