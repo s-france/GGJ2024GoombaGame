@@ -8,7 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://0x0lrql8w2pk" path="res://TaggleTog2.wav" id="5_kawy7"]
 [ext_resource type="Script" path="res://Music.gd" id="6_x23r3"]
 [ext_resource type="Texture2D" uid="uid://c8f2q2nav2675" path="res://bricksquare (1).png" id="8_2yhgk"]
-[ext_resource type="PackedScene" path="res://time_left.tscn" id="8_42a1c"]
+[ext_resource type="PackedScene" uid="uid://dn1jm1eoa03hb" path="res://time_left.tscn" id="8_42a1c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ivxac"]
 size = Vector2(186, 2685)
