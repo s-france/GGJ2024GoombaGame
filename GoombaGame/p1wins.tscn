@@ -30,7 +30,6 @@ text = "OK
 "
 
 [node name="Camera2D" type="Camera2D" parent="."]
-anchor_mode = 0
-zoom = Vector2(3, 3)
+position = Vector2(523, 314)
 
 [connection signal="pressed" from="ColorRect/OK" to="." method="_on_ok_pressed"]
