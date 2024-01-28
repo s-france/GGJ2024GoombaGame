@@ -4,9 +4,9 @@ extends CharacterBody2D
 @export var control : p2Controller
 
 
-const speed = 400.0
-const friction = 8000.0
-const accel = 5000.0
+const speed = 1400.0
+const friction = 10000.0
+const accel = 8.0
 
 @export var idx : int
 
@@ -16,7 +16,7 @@ var inControl : bool = false
 func _physics_process(delta):
 	
 	if inControl:
-		player_movement(control.input_direction, delta)
+		player_movement(control.input_direction.normalized(), delta)
 		move_and_slide()
 	
 
@@ -27,5 +27,6 @@ func player_movement(input, delta):
 		else:
 			velocity = Vector2.ZERO
 	else:
-		velocity += (input * accel * delta)
+		
+		velocity += (((speed*input) - velocity) * accel * delta)
 		velocity.limit_length(speed)

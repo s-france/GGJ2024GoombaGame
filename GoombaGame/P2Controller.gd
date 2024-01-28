@@ -51,6 +51,8 @@ func GetInputDirection():
 func SwitchPlayers(player: int):
 	currentPlayer.inControl = false 
 	
+	var oldIdx : int = playerIdx
+	
 	playerIdx = playerIdx + player
 		
 	if playerIdx < 0:
@@ -59,7 +61,7 @@ func SwitchPlayers(player: int):
 	if playerIdx > 2:
 		playerIdx = 0
 	
-	while !PlayersAlive[playerIdx]:
+	while !PlayersAlive[playerIdx] and playerIdx != oldIdx:
 	
 		playerIdx = playerIdx + player
 		
