@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@export var dSound : deathSound
+
 var speed = 2200.0
 const friction = 5000.0
 const accel = 5.0
@@ -45,7 +47,8 @@ func player_movement(input, delta):
 				
 				if col_amount == 2 && speed < 2500:
 					speed = 2650
-					timer.start(15)
+					if timer.time_left > 15.0:
+						timer.start(15.0)
 				
 				if col_amount == 3:
 					get_tree().change_scene_to_file("res://p1wins.tscn")
@@ -57,5 +60,7 @@ func player_movement(input, delta):
 func KillPlayer(collision, player: Player2):
 	player.control.PlayersAlive[player.idx] = 0
 	player.control.SwitchPlayers(1)
+	
+	dSound.playing = true
 	
 	collision.get_collider().queue_free()

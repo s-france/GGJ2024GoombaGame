@@ -2,6 +2,10 @@ class_name Player2
 extends CharacterBody2D
 
 @export var control : p2Controller
+@export var sprite : Sprite2D
+
+@export var playeractive : Texture2D
+@export var playerinactive : Texture2D
 
 
 const speed = 2400.0
@@ -15,9 +19,12 @@ var inControl : bool = false
 
 
 func _ready():
+	sprite.set_texture(playerinactive)
 	if idx == 1:
 		inControl = true
-
+		sprite.set_texture(playeractive)
+		
+	
 func _physics_process(delta):
 	
 	if inControl:

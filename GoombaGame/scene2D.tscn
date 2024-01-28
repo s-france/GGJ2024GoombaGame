@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ceqpurup3n5wt"]
+[gd_scene load_steps=19 format=3 uid="uid://ceqpurup3n5wt"]
 
 [ext_resource type="PackedScene" uid="uid://basgi7r75ho4u" path="res://player.tscn" id="1_f73e4"]
 [ext_resource type="Script" path="res://scene2D.gd" id="1_oev5n"]
@@ -6,9 +6,15 @@
 [ext_resource type="Script" path="res://P2Controller.gd" id="2_dxr3p"]
 [ext_resource type="Texture2D" uid="uid://7ccwnyyp3ogj" path="res://assets/CastleFloor.png" id="2_vrev5"]
 [ext_resource type="AudioStream" uid="uid://0x0lrql8w2pk" path="res://TaggleTog2.wav" id="5_kawy7"]
+[ext_resource type="Texture2D" uid="uid://4w11t4xn33qg" path="res://assets/p2-1 active.png" id="6_2pdhs"]
 [ext_resource type="Script" path="res://Music.gd" id="6_x23r3"]
+[ext_resource type="Texture2D" uid="uid://bctk8sexr5lfn" path="res://assets/p2-1.png" id="7_yvpvn"]
 [ext_resource type="Texture2D" uid="uid://c8f2q2nav2675" path="res://bricksquare (1).png" id="8_2yhgk"]
 [ext_resource type="PackedScene" path="res://time_left.tscn" id="8_42a1c"]
+[ext_resource type="Texture2D" uid="uid://ddmqxm3b3x0s0" path="res://assets/p2-3 active.png" id="8_a3dr6"]
+[ext_resource type="Texture2D" uid="uid://cpussjx0r0gt0" path="res://assets/p2-3.png" id="9_xlbn4"]
+[ext_resource type="Texture2D" uid="uid://deu7slaj438yg" path="res://assets/p2-2 active.png" id="10_k5io6"]
+[ext_resource type="Texture2D" uid="uid://34t86u4cpe1q" path="res://assets/p2-2.png" id="11_iigrr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ivxac"]
 size = Vector2(186, 2685)
@@ -37,17 +43,23 @@ script = ExtResource("2_dxr3p")
 position = Vector2(2392, -1071)
 collision_layer = 2
 control = NodePath("..")
+playeractive = ExtResource("6_2pdhs")
+playerinactive = ExtResource("7_yvpvn")
 
 [node name="Player2-2" parent="P2Controller" node_paths=PackedStringArray("control") instance=ExtResource("2_7n67y")]
 position = Vector2(172, 1999)
 collision_layer = 2
 control = NodePath("..")
+playeractive = ExtResource("8_a3dr6")
+playerinactive = ExtResource("9_xlbn4")
 idx = 1
 
 [node name="Player2-3" parent="P2Controller" node_paths=PackedStringArray("control") instance=ExtResource("2_7n67y")]
 position = Vector2(-3354, -517)
 collision_layer = 2
 control = NodePath("..")
+playeractive = ExtResource("10_k5io6")
+playerinactive = ExtResource("11_iigrr")
 idx = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

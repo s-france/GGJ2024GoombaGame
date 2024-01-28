@@ -1,14 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://basgi7r75ho4u"]
+[gd_scene load_steps=6 format=3 uid="uid://basgi7r75ho4u"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_6ewu2"]
 [ext_resource type="Texture2D" uid="uid://ct3dyakcektki" path="res://Hero.png" id="2_ormc5"]
+[ext_resource type="AudioStream" uid="uid://gu884jpu2wob" path="res://aDamageTaken.mp3" id="3_8c6y8"]
+[ext_resource type="Script" path="res://deathSound.gd" id="4_7a55y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_px4lh"]
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("dSound")]
 collision_mask = 3
 safe_margin = 1.0
 script = ExtResource("1_6ewu2")
+dSound = NodePath("AudioStreamPlayer")
 
 [node name="Unknown" type="Sprite2D" parent="."]
 position = Vector2(1, -14)
@@ -31,3 +34,9 @@ one_shot = true
 [node name="WallJumpTimer" type="Timer" parent="."]
 wait_time = 0.1
 one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_8c6y8")
+volume_db = 2.673
+pitch_scale = 2.33
+script = ExtResource("4_7a55y")

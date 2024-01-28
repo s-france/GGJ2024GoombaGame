@@ -10,8 +10,9 @@ var R : bool = false
 @onready var p1 = $"Player2-2"
 @onready var p2 = $"Player2-3"
 
-var playeractive = load("res://assets/p2-3 active.png")
-var playerinactive = load("res://assets/p2-3.png")
+
+#var playeractive = load("res://assets/p2-3 active.png")
+#var playerinactive = load("res://assets/p2-3.png")
 
 
 
@@ -55,7 +56,8 @@ func GetInputDirection():
 
 #player = 1 or -1 for right or left
 func SwitchPlayers(player: int):
-	currentPlayer.inControl = false 
+	currentPlayer.inControl = false
+	currentPlayer.sprite.set_texture(currentPlayer.playerinactive)
 	
 	var oldIdx : int = playerIdx
 	
@@ -79,6 +81,7 @@ func SwitchPlayers(player: int):
 	
 		
 	currentPlayer = PlayerCharacters[playerIdx]
+	currentPlayer.sprite.set_texture(currentPlayer.playeractive)
 	
 	
 	currentPlayer.inControl = true
