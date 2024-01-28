@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://Player.gd" id="1_6ewu2"]
 [ext_resource type="Texture2D" uid="uid://ct3dyakcektki" path="res://Hero.png" id="2_ormc5"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4syna"]
-height = 194.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_4kefr"]
+radius = 10.7
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 3
@@ -17,9 +17,9 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_ormc5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 7)
-scale = Vector2(-7.7242, 0.996042)
-shape = SubResource("CapsuleShape2D_4syna")
+position = Vector2(-2, 18)
+scale = Vector2(8.28, 8.28)
+shape = SubResource("CircleShape2D_4kefr")
 
 [node name="CoyoteJumpTimer" type="Timer" parent="."]
 wait_time = 0.1

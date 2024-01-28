@@ -25,11 +25,6 @@ visible = false
 scale = Vector2(0.369839, 0.369839)
 texture = ExtResource("3_j8k2k")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, -2)
-scale = Vector2(10.854, 11.1509)
-shape = SubResource("CircleShape2D_0b5ka")
-
 [node name="CoyoteJumpTimer" type="Timer" parent="."]
 wait_time = 0.1
 one_shot = true
@@ -60,3 +55,8 @@ texture = ExtResource("6_gtcxi")
 [node name="player2-3 active" type="Sprite2D" parent="."]
 scale = Vector2(0.374994, 0.374994)
 texture = ExtResource("7_y1hmq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -2)
+scale = Vector2(10.854, 11.1509)
+shape = SubResource("CircleShape2D_0b5ka")

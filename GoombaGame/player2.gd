@@ -6,7 +6,7 @@ extends CharacterBody2D
 
 const speed = 2400.0
 const friction = 9000.0
-const accel = 8.0
+const accel = 10.0
 
 @export var idx : int
 
