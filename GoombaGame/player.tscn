@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://basgi7r75ho4u"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_6ewu2"]
-[ext_resource type="Texture2D" uid="uid://bvswab51gqpw6" path="res://Player 1/Unknown.png" id="2_gdpj2"]
+[ext_resource type="Texture2D" uid="uid://ct3dyakcektki" path="res://Hero.png" id="2_ormc5"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6jwg3"]
-size = Vector2(224, 222)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4syna"]
+height = 194.0
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 3
@@ -12,11 +12,14 @@ safe_margin = 1.0
 script = ExtResource("1_6ewu2")
 
 [node name="Unknown" type="Sprite2D" parent="."]
-texture = ExtResource("2_gdpj2")
+position = Vector2(1, -14)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_ormc5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -2)
-shape = SubResource("RectangleShape2D_6jwg3")
+position = Vector2(-2, 7)
+scale = Vector2(-7.7242, 0.996042)
+shape = SubResource("CapsuleShape2D_4syna")
 
 [node name="CoyoteJumpTimer" type="Timer" parent="."]
 wait_time = 0.1

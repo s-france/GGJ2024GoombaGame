@@ -10,6 +10,13 @@ var R : bool = false
 @onready var p1 = $"Player2-2"
 @onready var p2 = $"Player2-3"
 
+@onready var p0active = $"Player2-1/$player2-1 active"
+@onready var p1active = $"Player2-2/$player2-2 active"
+@onready var p2active = $"Player2-3/$player2-3 active"
+
+
+
+
 @onready var PlayerCharacters = [p0, p1, p2]
 var PlayersAlive = [1, 1, 1]
 
@@ -73,6 +80,7 @@ func SwitchPlayers(player: int):
 	
 		
 	currentPlayer = PlayerCharacters[playerIdx]
+	
 	
 	currentPlayer.inControl = true
 	

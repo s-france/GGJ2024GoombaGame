@@ -1,6 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://b1nlcmipa6qi4"]
+[gd_scene load_steps=14 format=3 uid="uid://diknvnjhod7e3"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_ovtb8"]
+[ext_resource type="Texture2D" uid="uid://c8g5xx05bc7s8" path="res://assets/PLAY.png" id="2_2yurv"]
+[ext_resource type="Texture2D" uid="uid://ddli2bom78pju" path="res://assets/INSTRUCTIONS .png" id="3_57qo6"]
+[ext_resource type="Texture2D" uid="uid://bcn2gdjvlmx4t" path="res://assets/quit pressed.png" id="3_g4c06"]
+[ext_resource type="Texture2D" uid="uid://kv0rg01th77q" path="res://assets/quit hovered.png" id="4_52b3k"]
+[ext_resource type="Texture2D" uid="uid://cru766q3ohrga" path="res://assets/CREDITS.png" id="4_ily7n"]
+[ext_resource type="Texture2D" uid="uid://bwabxpiir1bam" path="res://assets/QUIT.png" id="5_1gdd7"]
+[ext_resource type="Texture2D" uid="uid://dgnheeldynxs1" path="res://assets/play pressed.png" id="6_v5gui"]
+[ext_resource type="Texture2D" uid="uid://bi3jc7cej43tp" path="res://assets/play hovered .png" id="7_q4hff"]
+[ext_resource type="Texture2D" uid="uid://mjt32pyxts6c" path="res://assets/credits pressed.png" id="9_r2pyx"]
+[ext_resource type="Texture2D" uid="uid://d3lbrf6oj7mhr" path="res://assets/credits hovered.png" id="10_ndmbp"]
+[ext_resource type="Texture2D" uid="uid://ckf6hsqy2y6dp" path="res://assets/instr pressed.png" id="12_mm6ds"]
+[ext_resource type="Texture2D" uid="uid://tbg1446epa1r" path="res://assets/Instr hovered.png" id="13_3m48s"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_ovtb8")
@@ -8,46 +20,61 @@ script = ExtResource("1_ovtb8")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(578, 322)
 
-[node name="play" type="Button" parent="."]
-offset_left = 300.0
-offset_top = 114.0
-offset_right = 832.0
-offset_bottom = 193.0
-focus_neighbor_top = NodePath("../quit")
-focus_neighbor_bottom = NodePath("../instructions")
-text = "PLAY"
-
-[node name="instructions" type="Button" parent="."]
-offset_left = 304.0
-offset_top = 208.0
-offset_right = 832.0
-offset_bottom = 280.0
-focus_neighbor_top = NodePath("../play")
-focus_neighbor_bottom = NodePath("../credits")
-text = "INSTRUCTIONS
-"
-
-[node name="credits" type="Button" parent="."]
-offset_left = 304.0
-offset_top = 296.0
-offset_right = 832.0
-offset_bottom = 360.0
-focus_neighbor_top = NodePath("../instructions")
-focus_neighbor_bottom = NodePath("../quit")
-text = "CREDITS"
-
-[node name="quit" type="Button" parent="."]
-offset_left = 304.0
-offset_top = 376.0
-offset_right = 832.0
-offset_bottom = 432.0
+[node name="quit" type="TextureButton" parent="."]
+offset_left = 144.0
+offset_top = 408.0
+offset_right = 900.0
+offset_bottom = 591.0
+scale = Vector2(0.54106, 0.54106)
 focus_neighbor_top = NodePath("../credits")
 focus_neighbor_bottom = NodePath("../play")
-text = "QUIT
-"
+texture_normal = ExtResource("5_1gdd7")
+texture_pressed = ExtResource("3_g4c06")
+texture_hover = ExtResource("4_52b3k")
+texture_focused = ExtResource("4_52b3k")
+
+[node name="play" type="TextureButton" parent="."]
+offset_left = 144.0
+offset_top = 96.0
+offset_right = 900.0
+offset_bottom = 281.0
+scale = Vector2(0.538608, 0.542333)
+focus_neighbor_top = NodePath("../quit")
+focus_neighbor_bottom = NodePath("../instructions")
+texture_normal = ExtResource("2_2yurv")
+texture_pressed = ExtResource("6_v5gui")
+texture_hover = ExtResource("7_q4hff")
+texture_focused = ExtResource("7_q4hff")
+
+[node name="credits" type="TextureButton" parent="."]
+offset_left = 144.0
+offset_top = 304.0
+offset_right = 899.0
+offset_bottom = 490.0
+scale = Vector2(0.542263, 0.542263)
+focus_neighbor_top = NodePath("../instructions")
+focus_neighbor_bottom = NodePath("../quit")
+texture_normal = ExtResource("4_ily7n")
+texture_pressed = ExtResource("9_r2pyx")
+texture_hover = ExtResource("10_ndmbp")
+texture_focused = ExtResource("10_ndmbp")
+
+[node name="instructions" type="TextureButton" parent="."]
+offset_left = 144.0
+offset_top = 200.0
+offset_right = 902.0
+offset_bottom = 385.0
+scale = Vector2(0.540283, 0.540283)
+focus_neighbor_top = NodePath("../play")
+focus_neighbor_bottom = NodePath("../credits")
+texture_normal = ExtResource("3_57qo6")
+texture_pressed = ExtResource("12_mm6ds")
+texture_hover = ExtResource("13_3m48s")
+texture_focused = ExtResource("13_3m48s")
 
 [node name="Instructions" type="ColorRect" parent="."]
 visible = false
+top_level = true
 offset_left = 312.0
 offset_top = 55.0
 offset_right = 825.0
@@ -73,6 +100,7 @@ text = "BACK  (WE'RE SO BACK)"
 
 [node name="Credits" type="ColorRect" parent="."]
 visible = false
+top_level = true
 offset_left = 281.0
 offset_top = 105.0
 offset_right = 864.0
@@ -103,9 +131,9 @@ SENA
 MARINA
 "
 
-[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="instructions" to="." method="_on_instructions_pressed"]
-[connection signal="pressed" from="credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="instructions" to="." method="_on_instructions_pressed"]
 [connection signal="pressed" from="Instructions/back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Credits/back2" to="." method="_on_back_pressed"]
