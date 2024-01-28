@@ -4,6 +4,8 @@ const speed = 1800.0
 const friction = 8000.0
 const accel = 5.0
 
+var hitPlayer : bool = false
+
 var col_amount = 0
 
 func _physics_process(delta):
@@ -30,14 +32,22 @@ func player_movement(input, delta):
 
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
+		
 		if collision.get_collider() is Player2:
-			col_amount += 1
-			if col_amount == 3:
-				get_tree().reload_current_scene()
+			
+			if !hitPlayer:
+				hitPlayer = true
 				
-			KillPlayer(collision, collision.get_collider())
+				print("colliding with player")
+				print(col_amount)
+				
+				col_amount += 1
+				if col_amount == 3:
+					get_tree().reload_current_scene()
+					
+				KillPlayer(collision, collision.get_collider())
 			
-			
+	hitPlayer = false
 			
 func KillPlayer(collision, player: Player2):
 	player.control.PlayersAlive[player.idx] = 0

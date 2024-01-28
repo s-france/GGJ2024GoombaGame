@@ -13,8 +13,8 @@ var R : bool = false
 @onready var PlayerCharacters = [p0, p1, p2]
 var PlayersAlive = [1, 1, 1]
 
-@onready var currentPlayer : Player2 = p0
-var playerIdx : int = 0
+@onready var currentPlayer : Player2 = p1
+var playerIdx : int = 1
 
 
 var input_direction : Vector2 = Vector2.ZERO

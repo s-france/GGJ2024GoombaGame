@@ -30,7 +30,6 @@ shape = SubResource("RectangleShape2D_8oryc")
 
 [node name="Player" parent="." instance=ExtResource("1_f73e4")]
 position = Vector2(-425, 6)
-collision_mask = 3
 
 [node name="P2Controller" type="Node2D" parent="."]
 script = ExtResource("2_dxr3p")
